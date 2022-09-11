@@ -14,6 +14,13 @@ export const postsRouter = createRouter()
       }),
     async resolve({ input }) {
       console.log(input.id);
-      return { id: 1, title: 'post_1' };
+      return { id: input.id, title: 'post_1' };
+    },
+  })
+  .query("findUnique", {
+    input: Number,
+    async resolve({ input }) {
+      console.log(input);
+      return { id: input, title: `post_${input}` };
     },
   });
