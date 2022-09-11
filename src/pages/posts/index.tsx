@@ -8,7 +8,7 @@ export const PostsPage = () => {
 
   return data.map(d => {
     return (
-      <div style={{ margin: '48px', border: '1px solid', padding: '4px' }}>
+      <div key={d.id} style={{ margin: '48px', border: '1px solid', padding: '4px' }}>
         <p>id: { d.id }</p>
         <p>title: { d.title }</p>  
       </div>
